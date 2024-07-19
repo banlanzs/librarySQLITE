@@ -1,4 +1,4 @@
-//zhoushuangandchenhaoyang
+//zhoushuang
 #include "managebooks.h"
 #include "ui_managebooks.h"
 #include"DatabaseManager.h"
