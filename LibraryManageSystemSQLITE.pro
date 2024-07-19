@@ -25,7 +25,7 @@ SOURCES += \
     managebooks.cpp \
     manageusers.cpp \
     mode.cpp \
-    readme.cpp \
+    readmeme.cpp \
     register.cpp \
     reservation.cpp \
     returnbook.cpp \
@@ -41,7 +41,7 @@ HEADERS += \
     managebooks.h \
     manageusers.h \
     mode.h \
-    readme.h \
+    readmeme.h \
     register.h \
     reservation.h \
     returnbook.h \
@@ -56,8 +56,7 @@ FORMS += \
     managebooks.ui \
     manageusers.ui \
     mode.ui \
-    readme.ui \
-    readme.ui \
+    readmeme.ui \
     register.ui \
     reservation.ui \
     returnbook.ui \
