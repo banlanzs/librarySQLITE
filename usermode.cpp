@@ -5,7 +5,6 @@
 #include"returnbook.h"
 #include"reservation.h"
 #include"managebooks.h"
-#include<QDebug>
 UserMode::UserMode(QString xuehao,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::UserMode),
