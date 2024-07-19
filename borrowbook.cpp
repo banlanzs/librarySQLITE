@@ -8,17 +8,12 @@
 #include<QDateTime>
 #include<QString>
 
-borrowbook::borrowbook(QString &xuehao,QWidget *parent) :
+borrowbook::borrowbook(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::borrowbook),
-    m_xuehao(xuehao)
+    ui(new Ui::borrowbook)
 {
     ui->setupUi(this);
     initDatabase();//初始化数据库连接
-    ui->lineEdit->setText(m_xuehao);
-    ui->lineEdit->setReadOnly(true);
-    connect(ui->lineEdit, &QLineEdit::editingFinished, this, &borrowbook::checkInput);
-
 }
 
 void borrowbook::initDatabase()
@@ -37,20 +32,20 @@ void borrowbook::initDatabase()
     }
 
     // 构建borrow表
-    QString sql("CREATE TABLE IF NOT EXISTS borrow("//检查表是否存在
-                "book_id text not null,"
-                "title text not null ,"
-                "xuehao text not null ,"
-                "borrow_time text not null,"
-                "created_at DATETIME DEFAULT CURRENT_TIMESTAMP,"
-                "is_online INTEGER DEFAULT 0)");
-//    QString sql("CREATE TABLE IF NOT EXISTS borrow ("
-//                    "book_id VARCHAR(255) NOT NULL,"
-//                    "title VARCHAR(255) NOT NULL,"
-//                    "xuehao VARCHAR(255) NOT NULL,"
-//                    "borrow_time VARCHAR(255) NOT NULL,"//借阅日期
-//                    "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"//截止日期
-//                    "is_online TINYINT DEFAULT 0)");
+//    QString sql("CREATE TABLE IF NOT EXISTS borrow("//检查表是否存在
+//                "book_id text not null,"
+//                "title text not null ,"
+//                "xuehao text not null ,"
+//                "borrow_time text not null,"
+//                "created_at DATETIME DEFAULT CURRENT_TIMESTAMP,"
+//                "is_online INTEGER DEFAULT 0)");
+    QString sql("CREATE TABLE IF NOT EXISTS borrow ("
+                    "book_id VARCHAR(255) NOT NULL,"
+                    "title VARCHAR(255) NOT NULL,"
+                    "xuehao VARCHAR(255) NOT NULL,"
+                    "borrow_time VARCHAR(255) NOT NULL,"//借阅日期
+                    "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"//截止日期
+                    "is_online TINYINT DEFAULT 0)");
 
     QSqlQuery createTableQuery(db);  // 声明一个QSqlQuery对象
     if (!createTableQuery.exec(sql)) {
@@ -160,23 +155,15 @@ void borrowbook::on_borrowButton_clicked()
     }
     //查询的结果
     int id = query.value(0).toInt();
-    ui->lineEdit->setText(m_xuehao);
-    if(m_xuehao==NULL){
-        QMessageBox::warning(this, "error", "学号导入错误！");
+    QString xuehao=ui->lineEdit->text();
+    if(xuehao==NULL){
+        QMessageBox::warning(this, "error", "请输入学号");
         return;
     }
-    //checkInput();
-    //检查学号是否符合规范(9位数字长度)，10位会超大小(管理员除外)
-//    if(xuehao!="admin"&&(xuehao.length()!=9||!xuehao.toUInt())){
-//        QMessageBox::warning(this,"error","学号必须是9位数字。");
-//        ui->lineEdit->clear();
-//        ui->lineEdit->setFocus();
-//        return;
-//    }
     QSqlQuery checkQuery(db);
     checkQuery.prepare("SELECT * FROM borrow WHERE title = ? AND xuehao = ?");
     checkQuery.addBindValue(bookname);
-    checkQuery.addBindValue(m_xuehao);
+    checkQuery.addBindValue(xuehao);
     if (!checkQuery.exec()) {
     }
     if(checkQuery.next()){
@@ -212,7 +199,7 @@ void borrowbook::on_borrowButton_clicked()
         insertquery.prepare(sql);//准备执行插入
         insertquery.addBindValue(shuhao);//插入书号
         insertquery.addBindValue(bookname);//插入书名
-        insertquery.addBindValue(m_xuehao);//插入学号
+        insertquery.addBindValue(xuehao);//插入学号
         insertquery.addBindValue(borrowdate);//插入借书时间
 
         if(!insertquery.exec()){
@@ -231,14 +218,3 @@ void borrowbook::on_borrowButton_clicked()
         QMessageBox::warning(this, "error", "无该书，借阅书籍失败！");
     }
 }
-
-void borrowbook::checkInput(){
-    QString input=ui->lineEdit->text();
-    if(input.isEmpty()) return;
-    else if((input.length()!=9||!input.toUInt())){
-        QMessageBox::warning(this,"error","学号必须是9位数字。");
-        ui->lineEdit->clear();
-        ui->lineEdit->setFocus();
-     }
-}
-

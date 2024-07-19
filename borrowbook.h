@@ -12,7 +12,7 @@ class borrowbook : public QDialog
     Q_OBJECT
 
 public:
-    explicit borrowbook(QString &xuehao,QWidget *parent = nullptr);
+    explicit borrowbook(QWidget *parent = nullptr);
     ~borrowbook();
 signals:
     void returntomode();//->closeButton
@@ -25,15 +25,12 @@ private slots:
     void on_searchButton_clicked();
 
     void on_borrowButton_clicked();
-        void checkInput();
 
 private:
     Ui::borrowbook *ui;
-    QString m_xuehao;
     QSqlDatabase db;
     void initDatabase();
     void loadBooks();
-
 };
 
 #endif // BORROWBOOK_H
