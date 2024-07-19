@@ -1,6 +1,6 @@
 #ifndef MANAGEBOOKS_H
 #define MANAGEBOOKS_H
-//chenhaoyang
+//zhoushuangandchenhaoyang
 #include <QDialog>
 #include<QSqlDatabase>
 #include<QDebug>
