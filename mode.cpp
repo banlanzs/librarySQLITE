@@ -3,6 +3,7 @@
 #include"mainwindow.h"
 #include"manageusers.h"
 #include"bookin.h"
+#include<QTimer>
 Mode::Mode(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Mode),

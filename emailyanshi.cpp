@@ -7,6 +7,7 @@
 #include<QMessageBox>
 #include<cstdlib>//for rand() and srand()
 #include<QTimer>//for time()
+#include<QSqlError>
 emailyanshi::emailyanshi(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::emailyanshi)

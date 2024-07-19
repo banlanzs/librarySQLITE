@@ -2,7 +2,7 @@
 #define README_H
 
 #include <QDialog>
-
+#include<QDebug>
 namespace Ui {
 class readme;
 }

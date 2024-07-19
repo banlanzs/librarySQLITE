@@ -4,6 +4,7 @@
 #include <QDialog>
 #include"DatabaseManager.h"
 #include<QSqlDatabase>
+#include<QDebug>
 namespace Ui {
 class BookIn;
 }

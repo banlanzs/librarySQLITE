@@ -6,6 +6,7 @@
 #include <QSqlDatabase>     //连接数据库
 #include <QDebug>
 #include <QSqlError>
+#include<QTimer>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

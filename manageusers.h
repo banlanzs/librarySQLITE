@@ -5,6 +5,7 @@
 #include<QSqlDatabase>
 #include"emailyanshi.h"
 #include<QTimer>
+#include<QDebug>
 namespace Ui {
 class ManageUsers;
 }

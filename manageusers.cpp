@@ -10,6 +10,7 @@
 #include<QDateTime>
 #include <ctime>    // For time()
 #include<QTimer>
+#include<QDebug>
 ManageUsers::ManageUsers(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ManageUsers),

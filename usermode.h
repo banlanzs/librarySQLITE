@@ -6,6 +6,7 @@
 #include"returnbook.h"
 #include"reservation.h"
 #include"managebooks.h"
+#include<QDebug>
 namespace Ui {
 class UserMode;
 }

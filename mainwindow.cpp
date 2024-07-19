@@ -13,6 +13,7 @@
 #include <QSettings>    //读写配置文件
 #include"emailyanshi.h"
 #include<QCloseEvent>
+#include<QTimer>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
     ui(new Ui::MainWindow),

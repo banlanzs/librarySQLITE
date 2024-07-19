@@ -5,6 +5,7 @@
 #include"manageusers.h"
 #include"bookin.h"
 #include"managebooks.h"
+#include<QDebug>
 namespace Ui {
 class Mode;
 }

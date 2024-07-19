@@ -1,6 +1,6 @@
 #include "readme.h"
 #include "ui_readme.h"
-
+#include<QTimer>
 readme::readme(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::readme)

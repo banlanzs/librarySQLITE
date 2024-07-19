@@ -21,6 +21,7 @@
 #include <cstdlib>  // For rand() and srand()
 #include <ctime>    // For time()
 #include<QTimer>
+#include<QDebug>
 Register::Register(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Register),

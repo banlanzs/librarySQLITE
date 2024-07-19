@@ -2,7 +2,7 @@
 #define EMAILYANSHI_H
 
 #include <QDialog>
-
+#include<QDebug>
 #include<QTcpSocket>
 namespace Ui {
 class emailyanshi;

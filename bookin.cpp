@@ -7,6 +7,7 @@
 #include <QDebug>
 #include<QRegularExpression>
 #include<QSqlDatabase>
+#include<QTimer>
 BookIn::BookIn(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::BookIn)

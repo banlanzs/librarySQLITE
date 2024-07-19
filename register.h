@@ -7,6 +7,7 @@
 #include "emailyanshi.h"
 #include<QTimer>
 #include<QRegExp>
+#include<QDebug>
 namespace Ui {
 class Register;
 }

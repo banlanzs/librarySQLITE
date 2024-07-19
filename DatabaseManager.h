@@ -7,6 +7,7 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include<QMessageBox>
 class DatabaseManager {
 public:
     static QSqlDatabase& getDatabase() {

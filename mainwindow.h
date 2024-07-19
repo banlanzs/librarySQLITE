@@ -7,6 +7,7 @@
 #include<QSqlDatabase>
 #include"usermode.h"
 #include"borrowbook.h"
+#include<QDebug>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

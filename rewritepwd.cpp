@@ -20,6 +20,7 @@
 #include <QtNetwork/QSslConfiguration>
 #include <QtNetwork/QTcpSocket>
 #include <QTextStream>
+#include<QTimer>
 rewritepwd::rewritepwd(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::rewritepwd),

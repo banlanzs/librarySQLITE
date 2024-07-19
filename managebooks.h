@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include<QSqlDatabase>
+#include<QDebug>
 namespace Ui {
 class managebooks;
 }
