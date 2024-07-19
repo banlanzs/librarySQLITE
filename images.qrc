@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>background.png</file>
+        <file>bg2.png</file>
+        <file>980.jpg</file>
+        <file>0eefae7af46b407ae390a0fad8c36b7e0bb7a043d956e-UVgqj9_fw658.webp</file>
+        <file>225ef3557e31ea0.jpg</file>
+        <file>zr9tjspe.png</file>
+        <file>iqadxkee.png</file>
+        <file>x0kujbup.png</file>
+    </qresource>
+</RCC>
