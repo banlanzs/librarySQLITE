@@ -1,6 +1,6 @@
 #ifndef MODE_H
 #define MODE_H
-
+//zhoushuang
 #include <QDialog>
 #include"manageusers.h"
 #include"bookin.h"

@@ -1,6 +1,6 @@
 #ifndef README_H
 #define README_H
-
+//zhoushuang
 #include <QDialog>
 #include<QDebug>
 namespace Ui {

@@ -1,5 +1,6 @@
 #ifndef DATABASEMANAGER_H
 #define DATABASEMANAGER_H
+//zhoushuang
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QDebug>

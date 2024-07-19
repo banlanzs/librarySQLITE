@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+//zhoushuang
 #include <QMainWindow>
 #include<QWidget>
 #include<QMessageBox>

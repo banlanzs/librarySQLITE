@@ -1,5 +1,6 @@
 #ifndef REWRITEPWD_H
 #define REWRITEPWD_H
+//zhoushuang
 #include"emailyanshi.h"
 #include"mainwindow.h"
 #include <QDialog>

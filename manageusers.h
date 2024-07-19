@@ -1,6 +1,6 @@
 #ifndef MANAGEUSERS_H
 #define MANAGEUSERS_H
-
+//zhoushuang
 #include <QDialog>
 #include<QSqlDatabase>
 #include"emailyanshi.h"

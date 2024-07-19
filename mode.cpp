@@ -1,3 +1,4 @@
+//zhoushuang
 #include "mode.h"
 #include "ui_mode.h"
 #include"mainwindow.h"

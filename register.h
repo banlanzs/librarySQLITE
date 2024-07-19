@@ -1,6 +1,6 @@
 #ifndef REGISTER_H
 #define REGISTER_H
-
+//zhoushuang
 #include <QDialog>
 #include<QTcpSocket>
 #include<QtSql>
