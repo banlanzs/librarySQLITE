@@ -17,10 +17,10 @@ emailyanshi::emailyanshi(QWidget *parent) :
     m_pSocket=new QTcpSocket();
     m_pTimer=new QTimer(this);//初始化QTimer
     // 设置默认值
-        ui->SendEmail_lineEdit->setText("2649819738@qq.com");
-        ui->logid_lineEdit->setText("2649819738");
-        ui->logpasswd_lineEidt->setText("qxfxbmxxglqleafd");//授权码
-        ui->logid_lineEdit->setText("2649819738");
+        ui->SendEmail_lineEdit->setText("填入自己的转发邮箱");
+        ui->logid_lineEdit->setText("邮箱号");
+        ui->logpasswd_lineEidt->setText("");//授权码
+        ui->logid_lineEdit->setText("邮箱号");
         ui->subject_lineEdit->setText("来自图书管理系统的信息");
         ui->textEdit_Text->setText("您好！您的验证码为");
         // Generate initial verification code
